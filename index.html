@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <body>
+
+        <h1>Magic: the Gathering Bountry Generator</h1>
+
+        <button onclick="getRandomBounty()">New Bounty</button>
+        <p/>
+
+        <img id="bountyCard" src="https://cards.scryfall.io/normal/front/c/d/cd756281-c63f-44cf-88b5-e5d461195acd.jpg?1712319074">
+        <img id="bountyBack" src="https://cards.scryfall.io/normal/back/a/c/acd27632-4c28-4dc3-90ad-b94fe176b91a.jpg?1712319002">
+        <p/>
+
+        Made by BluezamX, Magic the Gathering is (C) Wizards of the Coast.
+
+        <script>
+            function getRandomBounty()
+            {
+                const bounties = [
+                    "https://cards.scryfall.io/normal/front/a/c/acd27632-4c28-4dc3-90ad-b94fe176b91a.jpg?1712319002",
+                    "https://cards.scryfall.io/normal/front/c/d/cd756281-c63f-44cf-88b5-e5d461195acd.jpg?1712319074",
+                    "https://cards.scryfall.io/normal/front/4/1/415c0799-2ab4-4f88-be9b-d47c07d7a44b.jpg?1712396684",
+                    "https://cards.scryfall.io/normal/front/5/e/5e54793b-a5e4-4391-8bbb-509a99e08bcb.jpg?1712319237",
+                    "https://cards.scryfall.io/normal/front/f/7/f7a095ac-8316-4824-bad5-0b74a58dd2e9.jpg?1712319254",
+                    "https://cards.scryfall.io/normal/front/0/f/0fd5b9c3-9c18-446d-9d81-7a3a90d7bbee.jpg?1712319301",
+                    "https://cards.scryfall.io/normal/front/f/e/fe1ca7a3-025f-4ab4-9764-c0b11e010f97.jpg?1773134328",
+                    "https://cards.scryfall.io/normal/front/1/f/1fbba46a-e9f1-43d7-820f-7c9c43244aa5.jpg?1712396718",
+                    "https://cards.scryfall.io/normal/front/5/9/590120cd-b072-4480-9652-f9dec7de4065.jpg?1712319352",
+                    "https://cards.scryfall.io/normal/front/2/5/25a24ce6-ad4d-46f7-9705-42318d1f41ff.jpg?1712396727",
+                    "https://cards.scryfall.io/normal/front/9/2/92d36a9a-c39c-41e6-9f31-4fcb5e820bd9.jpg?1712319285",
+                    "https://cards.scryfall.io/normal/front/4/c/4c6cd098-5a40-4031-af21-8746165ae442.jpg?1712319384"
+                ];
+
+                const id = "bountyCard";
+                const link = bounties[Math.floor(Math.random() * bounties.length)]
+                
+                document.getElementById(id).src=link;
+            }
+        </script>
+    </body>
+</html>
